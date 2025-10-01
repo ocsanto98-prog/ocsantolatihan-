@@ -1,1 +1,8 @@
-var json_Kangkareng3_2 = {"type":"FeatureCollection","name":"Kangkareng3_2","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":null,"Name":"Kangkareng 3","description":null,"timestamp":null,"begin":null,"end":null,"altitudeMode":null,"tessellate":-1.0,"extrude":0.0,"visibility":1.0,"drawOrder":null,"icon":null},"geometry":{"type":"Point","coordinates":[121.76005,-2.3137827]}}]}
+var json_Kangkareng3_2 = {
+"type": "FeatureCollection",
+"name": "Kangkareng3_2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null, "Name": "Kangkareng 3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": 1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 121.76005, -2.3137827 ] } }
+]
+}
