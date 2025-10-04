@@ -63,11 +63,10 @@
                 fillOpacity: 1
               });
             }
-            highlightLayer.openPopup();
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-2.323549305986791,121.75492060408],[-2.318299305986789,121.76354560408]]);
+        }).fitBounds([[-2.4090508790690937,121.67580313783884],[-2.290943876055593,121.86983607136102]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -126,13 +125,6 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
@@ -185,13 +177,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -249,13 +234,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -316,13 +294,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -385,13 +356,6 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
@@ -451,13 +415,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -524,13 +481,6 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
@@ -595,13 +545,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -670,13 +613,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -770,13 +706,6 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
@@ -868,13 +797,6 @@
                         if (typeof e.target._eventParents[i].resetStyle === 'function') {
                             e.target._eventParents[i].resetStyle(e.target);
                         }
-                    }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
                     }
                 },
                 mouseover: highlightFeature,
@@ -968,23 +890,15 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="id" colspan="2"><strong>id</strong><br />' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Kawasan</th>\
-                        <td>' + (feature.properties['Kawasan'] !== null ? autolinker.link(String(feature.properties['Kawasan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Kawasan" colspan="2"><strong>Kawasan</strong><br />' + (feature.properties['Kawasan'] !== null ? autolinker.link(String(feature.properties['Kawasan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Luas Ha</th>\
@@ -1035,13 +949,6 @@
                             e.target._eventParents[i].resetStyle(e.target);
                         }
                     }
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
                 },
                 mouseover: highlightFeature,
             });
@@ -1073,11 +980,11 @@
                         <td colspan="2">' + (feature.properties['kode_wil'] !== null ? autolinker.link(String(feature.properties['kode_wil']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">komoditas</th>\
-                        <td>' + (feature.properties['komoditas'] !== null ? autolinker.link(String(feature.properties['komoditas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>komoditas</strong><br />' + (feature.properties['komoditas'] !== null ? autolinker.link(String(feature.properties['komoditas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['lokasi'] !== null ? autolinker.link(String(feature.properties['lokasi']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">lokasi</th>\
+                        <td>' + (feature.properties['lokasi'] !== null ? autolinker.link(String(feature.properties['lokasi']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">luas_sk</th>\
